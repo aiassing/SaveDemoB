@@ -53,7 +53,7 @@
 			</tr>
 			<tr>
 				<td>出生日期：</td>
-				<td><input type="text" name="csrq">
+				<td><input type="text" name="csrq"
 				<!-- 防空值引起数据库崩溃-->
 					value="<%if(stu.getCsrq()==null) out.print("");else out.print(stu.getCsrq());%>"
 					size=20></td>
