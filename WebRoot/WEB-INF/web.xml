@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>demo_sms</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>loginServlet</servlet-name>
+  <servlet-class>com.aias.servlet.loginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>exitServlet</servlet-name>
+    <servlet-class>com.aias.servlet.exitServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>inputStuInfoServlet</servlet-name>
+    <servlet-class>com.aias.servlet.inputStuInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>queryAllStuServlet</servlet-name>
+    <servlet-class>com.aias.servlet.queryAllStuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>modifyOneStuServlet</servlet-name>
+    <servlet-class>com.aias.servlet.modifyOneStuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>modifyOneStuInfoServlet</servlet-name>
+    <servlet-class>com.aias.servlet.modifyOneStuInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>deleteStuServlet</servlet-name>
+    <servlet-class>com.aias.servlet.deleteStuServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+  	<servlet-name>loginServlet</servlet-name>
+  	<url-pattern>/user/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>exitServlet</servlet-name>
+    <url-pattern>/user/exitServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>inputStuInfoServlet</servlet-name>
+    <url-pattern>/student/inputStuInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>queryAllStuServlet</servlet-name>
+    <url-pattern>/student/queryAllStuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>modifyOneStuServlet</servlet-name>
+    <url-pattern>/student/modifyOneStuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>modifyOneStuInfoServlet</servlet-name>
+    <url-pattern>/student/modifyOneStuInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteStuServlet</servlet-name>
+    <url-pattern>/student/deleteStuServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
