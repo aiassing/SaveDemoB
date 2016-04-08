@@ -19,9 +19,8 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
-<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/bootstrap.css">
 
 </head>
 <jsp:include page="isLogin.jsp"></jsp:include>
@@ -31,7 +30,7 @@
 		// out.print(stus.size());  
 		Iterator iter = stus.iterator();
 	%>
-	<table>
+	<table class="table table-striped">
 		<tr>
 			<td>id</td>
 			<td>昵称</td>

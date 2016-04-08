@@ -18,16 +18,15 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
-<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/bootstrap.css">
 
 </head>
 <jsp:include page="isLogin.jsp"></jsp:include>
 <body>
 	<center>
 		<form action="student/inputStuInfoServlet" method="post">
-			<table bgColor="#c0c0c0">
+			<table class="table table-striped" bgColor="#c0c0c0">
 				<tr>
 					<td align="center" bgcolor=green colspan=2><font color=white>学生信息录入</font></td>
 				</tr>
@@ -46,7 +45,7 @@
 				</tr>
 				<tr>
 					<td>出生日期：</td>
-					<td><input type="text" name="csrq" size=20></td>
+					<td><input type="text" name="csrq" size=20 placeholder="yyyy-mm-dd"></td>
 				</tr>
 				<tr>
 					<td>所学专业：</td>
@@ -58,7 +57,7 @@
 				</tr>
 				<tr>
 					<td>所学课程：</td>
-					<td><select name="kc" size=2 multiple="multiple">
+					<td><select name="kc" size=5 multiple="multiple">
 							<option>计算机导论</option>
 							<option>数据结构</option>
 							<option>数据库原理</option>
@@ -78,10 +77,13 @@
 					<td>备注</td>
 					<td><textarea rows=3 cols=20 name="bz"></textarea></td>
 				</tr>
-				<tr ><td align="center" colspan="2" ><input type="submit"  value="提交">&nbsp;&nbsp; <input
-				type="reset"  value="重置"></td></tr>				
+				<tr>
+					<td align="center" colspan="2"><input
+						class="btn btn-sm btn-success" type="submit" value="提交">&nbsp;&nbsp;
+						<input type="reset" class="btn btn-sm btn-warning" value="重置"></td>
+				</tr>
 			</table>
-			
+
 		</form>
 	</center>
 </body>

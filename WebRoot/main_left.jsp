@@ -18,22 +18,37 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
-<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/bootstrap.css">
 
 </head>
 <jsp:include page="isLogin.jsp"></jsp:include>
 <body>
-	<a href="inputStuInfo.jsp" target="main_right">录入学生信息</a>
-	<br>
-	<a href="student/queryAllStuServlet?osid=query" target="main_right">查看学生信息</a>
-	<br>
-	<a href="student/queryAllStuServlet?osid=modify " target="main_right">修改学生信息</a>
-	<br>
-	<a href="student/queryAllStuServlet?osid=delete" target="main_right">删除学生信息</a>
-	<br>
-	<a href="user/exitServlet" target="_top">退出</a>
-	<br>
+	<div class="container">
+		<br>
+		<form action="inputStuInfo.jsp" target="main_right">
+			<input class="btn btn-primary" type="submit" value="录入学生信息" />
+		</form>
+		<br>
+		<form action="student/queryAllStuServlet?osid=query"
+			target="main_right" method="post">
+			<input class="btn btn-info" type="submit" value="查看学生信息" />
+		</form>
+		<br>
+		<form action="student/queryAllStuServlet?osid=modify"
+			target="main_right" method="post">
+			<input class="btn btn-warning" type="submit" value="修改学生信息" />
+		</form>
+		<br>
+		<form action="student/queryAllStuServlet?osid=delete"
+			target="main_right" method="post">
+			<input class="btn btn-danger" type="submit" value="删除学生信息" />
+		</form>
+		<br>
+		<form action="user/exitServlet" target="_top" method="post">
+			<input class="btn btn-default" type="submit" value="退出" />
+		</form>
+		<br>
+	</div>
 </body>
 </html>

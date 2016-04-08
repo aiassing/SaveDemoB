@@ -21,13 +21,18 @@
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/bootstrap.css">
 </head>
 <body>
-	<form action="user/loginServlet" name="login" >
+	<div class="alert alert-info" role="alert">
+		<strong>Hello !</strong> 这里是登录页面
+	</div>
+	<div class="form-group">
+	<form action="user/loginServlet" name="login" class="form">
 		<label>用户名</label>
-		<input type="text" name="username" "><br />
+		<input type="text" name="username" class="form-control" placeholder="请输入你 的用户名或Email">
 		<label>密码</label>
-		<input type="password" name="password" ><br />
+		<input type="password" name="password" class="form-control" placeholder="请输入你的密码"><br />
 		<button type="submit" class="btn btn-default">登录</button> 
 	</form>
+	</div>
 
 </body>
 </html>

@@ -3,8 +3,8 @@
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
-	+ request.getServerName() + ":" + request.getServerPort()
-	+ path + "/";
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -19,18 +19,17 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
-<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/bootstrap.css">
 
 </head>
 
 <body>
 	<%
-		stuInfo stu =(stuInfo) session.getAttribute("stu");
+		stuInfo stu = (stuInfo) session.getAttribute("stu");
 	%>
 	<form action="student/modifyOneStuInfoServlet" method="post">
-		<table bgColor="#c0c0c0">
+		<table class="table table-striped">
 
 			<tr>
 				<td align="center" bgcolor=green colspan=2><font color=white>学生信息录入</font></td>
@@ -53,9 +52,12 @@
 			</tr>
 			<tr>
 				<td>出生日期：</td>
+				<!-- 防止因空值引起数据库崩溃-->
 				<td><input type="text" name="csrq"
-				<!-- 防空值引起数据库崩溃-->
-					value="<%if(stu.getCsrq()==null) out.print("");else out.print(stu.getCsrq());%>"
+					value="<%if (stu.getCsrq() == null)
+				out.print("");
+			else
+				out.print(stu.getCsrq());%>"
 					size=20></td>
 			</tr>
 			<tr>
@@ -68,7 +70,7 @@
 			</tr>
 			<tr>
 				<td>所学课程：</td>
-				<td><select name="kc" size=2 multiple="multiple">
+				<td><select name="kc" size=5 multiple="multiple">
 						<option
 							<%String kc[] = stu.getKc();
 			for (int i = 0; i < kc.length; i++) {
@@ -143,8 +145,9 @@
 			</tr>
 			<tr>
 				<td align="center" colspan="2"><input type="hidden" name="id"
-					value="<%=stu.getId()%>" /><input type="submit" value="提交">&nbsp;&nbsp;
-					<input type="reset" value="重置"></td>
+					value="<%=stu.getId()%>" /><input
+						class="btn btn-sm btn-success" type="submit" value="提交">&nbsp;&nbsp;
+						<input type="reset" class="btn btn-sm btn-warning" value="重置"></td>
 			</tr>
 		</table>
 

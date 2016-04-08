@@ -18,7 +18,8 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/bootstrap.css">
 
 </head>
 <jsp:include page="isLogin.jsp"></jsp:include>
@@ -30,9 +31,8 @@
 	</frameset>
 </frameset>
 <body>
-		<div class="alert alert-success" role="alert">
-		<strong>Well done!</strong> this is main
-	</div>
+
+
 
 </body>
 </html>

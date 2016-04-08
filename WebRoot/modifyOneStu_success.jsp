@@ -16,13 +16,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/bootstrap.css">
 
   </head>
   
   <body>
-   修改学生信息成功！！！
+	<div class="alert alert-success " role="alert">
+		<h1>
+			<strong>修改学生信息成功</strong> 
+		</h1>
+	</div>
   </body>
 </html>
