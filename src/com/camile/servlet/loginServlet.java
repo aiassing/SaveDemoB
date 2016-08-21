@@ -2,6 +2,7 @@ package com.camile.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.camile.service.userService;
 import com.camilemodel.userTable;
 
+@WebServlet("/user/loginServlet")
 public class loginServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest rq, HttpServletResponse rp) {
