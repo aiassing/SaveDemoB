@@ -1,4 +1,4 @@
-package com.aias.service;
+package com.camile.service;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,14 +7,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.aias.model.stuInfo;
+import com.camilemodel.stuInfo;
 
 public class stuInfoService {
 	private Connection conn;
 	private PreparedStatement pstmt;
 
 	public stuInfoService() {
-		conn = new com.aias.conn.conn().getCon();
+		conn = new com.camile.conn.conn().getCon();
 	}
 
 	public boolean addStu(stuInfo stu) {
@@ -136,7 +136,8 @@ public class stuInfoService {
 	public Boolean deleteStu(int id) {
 
 		try {
-			pstmt = conn.prepareStatement("delete from  studentinfo where id=?");
+			pstmt = conn
+					.prepareStatement("delete from  studentinfo where id=?");
 			pstmt.setInt(1, id);
 			pstmt.executeUpdate();
 			return true;

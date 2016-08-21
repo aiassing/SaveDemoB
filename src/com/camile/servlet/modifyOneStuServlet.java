@@ -1,4 +1,4 @@
-package com.aias.servlet;
+package com.camile.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.aias.model.stuInfo;
-import com.aias.service.stuInfoService;
+import com.camile.service.stuInfoService;
+import com.camilemodel.stuInfo;
 
 public class modifyOneStuServlet extends HttpServlet {
 
@@ -29,32 +29,13 @@ public class modifyOneStuServlet extends HttpServlet {
 		// Put your code here
 	}
 
-	/**
-	 * The doGet method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to get.
-	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
-	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		doPost(request, response);
 	}
 
-	/**
-	 * The doPost method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to post.
-	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
-	 */
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -68,7 +49,8 @@ public class modifyOneStuServlet extends HttpServlet {
 	/**
 	 * Initialization of the servlet. <br>
 	 *
-	 * @throws ServletException if an error occurs
+	 * @throws ServletException
+	 *             if an error occurs
 	 */
 	public void init() throws ServletException {
 		// Put your code here

@@ -1,4 +1,4 @@
-<%@page import="com.aias.model.stuInfo"%>
+<%@page import="com.camilemodel.stuInfo"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
@@ -145,9 +145,9 @@
 			</tr>
 			<tr>
 				<td align="center" colspan="2"><input type="hidden" name="id"
-					value="<%=stu.getId()%>" /><input
-						class="btn btn-sm btn-success" type="submit" value="提交">&nbsp;&nbsp;
-						<input type="reset" class="btn btn-sm btn-warning" value="重置"></td>
+					value="<%=stu.getId()%>" /><input class="btn btn-sm btn-success"
+					type="submit" value="提交">&nbsp;&nbsp; <input type="reset"
+					class="btn btn-sm btn-warning" value="重置"></td>
 			</tr>
 		</table>
 

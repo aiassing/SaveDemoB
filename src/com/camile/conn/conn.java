@@ -1,4 +1,4 @@
-package com.aias.conn;
+package com.camile.conn;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

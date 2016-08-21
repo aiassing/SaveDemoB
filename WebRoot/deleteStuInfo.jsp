@@ -1,4 +1,4 @@
-<%@page import="com.aias.model.stuInfo"%>
+<%@page import="com.camilemodel.stuInfo"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
@@ -26,7 +26,7 @@
 <jsp:include page="isLogin.jsp"></jsp:include>
 <body>
 	<%
-			List stus = (List)session.getAttribute("stus");
+		List stus = (List) session.getAttribute("stus");
 		// out.print(stus.size());  
 		Iterator iter = stus.iterator();
 	%>

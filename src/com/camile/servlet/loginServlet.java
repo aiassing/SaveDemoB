@@ -1,18 +1,17 @@
-package com.aias.servlet;
+package com.camile.servlet;
 
 import java.io.IOException;
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.aias.model.userTable;
-import com.aias.service.userService;
+import com.camile.service.userService;
+import com.camilemodel.userTable;
 
 public class loginServlet extends HttpServlet {
-	
+
 	public void doPost(HttpServletRequest rq, HttpServletResponse rp) {
 
 		String username = rq.getParameter("username");
@@ -22,10 +21,10 @@ public class loginServlet extends HttpServlet {
 		user.setPassword(password);
 		try {
 			if (new userService().valiUser(user)) {
-				HttpSession session=rq.getSession();
+				HttpSession session = rq.getSession();
 				session.setAttribute("user", user);
 				rp.sendRedirect("../main.jsp");
-			}else{
+			} else {
 				rp.sendRedirect("../index.jsp");
 			}
 		} catch (IOException e) {
@@ -33,7 +32,7 @@ public class loginServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void doGet(HttpServletRequest rq, HttpServletResponse rp) {
 		doPost(rq, rp);
 	}

@@ -1,24 +1,25 @@
-package com.aias.service;
+package com.camile.service;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.aias.model.userTable;
+import com.camilemodel.userTable;
 
 public class userService {
 	private Connection conn;
 	private PreparedStatement pstmt;
 
 	public userService() {
-		conn = new com.aias.conn.conn().getCon();
+		conn = new com.camile.conn.conn().getCon();
 	}
 
 	public boolean valiUser(userTable user) {
 
 		try {
-			pstmt = conn.prepareStatement("select * from usertable where username=? and password=?");
+			pstmt = conn
+					.prepareStatement("select * from usertable where username=? and password=?");
 			pstmt.setString(1, user.getUsername());
 			pstmt.setString(2, user.getPassword());
 			ResultSet rs = pstmt.executeQuery();

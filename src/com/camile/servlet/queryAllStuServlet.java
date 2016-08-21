@@ -1,4 +1,4 @@
-package com.aias.servlet;
+package com.camile.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.aias.service.stuInfoService;
+import com.camile.service.stuInfoService;
 
 public class queryAllStuServlet extends HttpServlet {
 
@@ -29,52 +29,25 @@ public class queryAllStuServlet extends HttpServlet {
 		// Put your code here
 	}
 
-	/**
-	 * The doGet method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to get.
-	 * 
-	 * @param request
-	 *            the request send by the client to the server
-	 * @param response
-	 *            the response send by the server to the client
-	 * @throws ServletException
-	 *             if an error occurred
-	 * @throws IOException
-	 *             if an error occurred
-	 */
+
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		doPost(request, response);
 	}
 
-	/**
-	 * The doPost method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to
-	 * post.
-	 * 
-	 * @param request
-	 *            the request send by the client to the server
-	 * @param response
-	 *            the response send by the server to the client
-	 * @throws ServletException
-	 *             if an error occurred
-	 * @throws IOException
-	 *             if an error occurred
-	 */
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String osid = request.getParameter("osid");
 		List stus = new stuInfoService().queryAllStu();
 		HttpSession session = request.getSession();
 		session.setAttribute("stus", stus);
-		if (osid.equals("query")){
+		if (osid.equals("query")) {
 			response.sendRedirect("../displayStuInfo.jsp");
-		}else if(osid.equals("modify")){
+		} else if (osid.equals("modify")) {
 			response.sendRedirect("../modifyStuInfo.jsp");
-		}else if (osid.equals("delete")){
+		} else if (osid.equals("delete")) {
 			response.sendRedirect("../deleteStuInfo.jsp");
 		}
 	}

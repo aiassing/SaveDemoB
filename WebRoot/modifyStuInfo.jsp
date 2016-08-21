@@ -1,4 +1,4 @@
-<%@page import="com.aias.model.stuInfo"%>
+<%@page import="com.camilemodel.stuInfo"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
@@ -25,8 +25,8 @@
 </head>
 <jsp:include page="isLogin.jsp"></jsp:include>
 <body>
-		<%
-		List stus = (List)session.getAttribute("stus");
+	<%
+		List stus = (List) session.getAttribute("stus");
 		// out.print(stus.size());  
 		Iterator iter = stus.iterator();
 	%>
@@ -65,7 +65,8 @@
 			<td><%=student.getKcs()%></td>
 			<td><%=student.getXqs()%></td>
 			<td><%=student.getBz()%></td>
-			<td><a href="student/modifyOneStuServlet?id=<%=student.getId()%>">修改</a></td>
+			<td><a
+				href="student/modifyOneStuServlet?id=<%=student.getId()%>">修改</a></td>
 		</tr>
 		<%
 			i++;
