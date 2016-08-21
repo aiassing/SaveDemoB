@@ -8,10 +8,10 @@
 
 如果不会点击上面的标题或者自行百度。
 ##开始
--  在MySQL中运行"demosms.sql"这个文件中的SQL语句。
+-  在MySQL先创建一個数据库，名为demosms，然后在其中运行"demosms.sql"这个文件中的SQL语句。
 -  下载，打开Eclipse，导入工程包。(1.0.1之后的版本添加了少量的bootstrap)
 -  将MySQL驱动程序加入Tomcat的lib目录下
--  在Eclipse中打开com.aias.conn目录下的这段代码进行修改：
+-  在Eclipse中打开com.camile.conn目录下的这段代码进行修改：
 ```java
 //以下配置在你安装MySQL时候都会让你设置，请记住。
 String user = "你的MySQL用户名";
