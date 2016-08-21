@@ -6,7 +6,7 @@
 - v1.0.0：第一个版本。
 - v1.0.1: 修复了一个关于表单的bug。
 - v1.1.0: 添加了BootStrap样式，使网页美观了一些。
-- v1.2.0: 采用注解的形式去完成url的路径映射，离开web.xml繁杂的配置。
+- v1.2.0: 采用注解的形式去完成url的路径映射，离开web.xml繁杂的配置；并添加了Maven支持。
 
 ##环境配置
 - [Java6以上的版本](http://jingyan.baidu.com/article/f96699bb8b38e0894e3c1bef.html)
@@ -17,7 +17,7 @@
 如果不会点击上面的标题或者自行百度。
 ##开始
 -  在MySQL先创建一個数据库，名为demosms，然后在其中运行"demosms.sql"这个文件中的SQL语句。
--  下载，打开Eclipse，导入工程包。(1.0.1之后的版本添加了少量的bootstrap)
+-  下载，导入该Maven工程。
 -  将MySQL驱动程序加入Tomcat的lib目录下
 -  在Eclipse中打开com.camile.conn目录下的这段代码进行修改：
 ```java
