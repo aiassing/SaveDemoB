@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.camilemodel.stuInfo;
+import com.camile.model.stuInfo;
 
 public class stuInfoService {
 	private Connection conn;

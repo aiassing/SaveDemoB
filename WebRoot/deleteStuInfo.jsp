@@ -1,4 +1,4 @@
-<%@page import="com.camilemodel.stuInfo"%>
+<%@page import="com.camile.model.stuInfo"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();

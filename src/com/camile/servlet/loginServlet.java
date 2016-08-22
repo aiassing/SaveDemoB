@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.camile.model.userTable;
 import com.camile.service.userService;
-import com.camilemodel.userTable;
 
 @WebServlet("/user/loginServlet")
 public class loginServlet extends HttpServlet {

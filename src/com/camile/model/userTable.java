@@ -1,4 +1,4 @@
-package com.camilemodel;
+package com.camile.model;
 
 public class userTable {
 	private String username;

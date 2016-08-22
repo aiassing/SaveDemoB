@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.camile.model.stuInfo;
 import com.camile.service.stuInfoService;
-import com.camilemodel.stuInfo;
 
 @WebServlet("/student/modifyOneStuInfoServlet")
 public class modifyOneStuInfoServlet extends HttpServlet {
